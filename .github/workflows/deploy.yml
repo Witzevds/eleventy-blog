@@ -3,7 +3,7 @@ name: Deploy Eleventy site to GitHub Pages
 on:
   push:
     branches:
-      - main # or master
+      - main
 
 jobs:
   build:
@@ -28,4 +28,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output # or _site
+          publish_dir: ./output # Ensure this matches your Eleventy output directory
+          publish_branch: main # This specifies the branch to which the action will push the changes
+          keep_files: true # Optional: Keep files that are not in the output directory
