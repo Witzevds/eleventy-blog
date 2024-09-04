@@ -3,7 +3,7 @@ name: Deploy Eleventy site to GitHub Pages
 on:
   push:
     branches:
-      - main # Adjust if your source branch is named differently
+      - main # Replace with your default branch name
 
 jobs:
   build:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "20" # Adjust to match your Node.js version
+          node-version: "20" # Use the appropriate Node.js version
 
       - name: Install dependencies
         run: npm install
@@ -28,5 +28,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output # Ensure this matches the output directory in your Eleventy config
-          publish_branch: gh-pages # Branch to deploy to
+          publish_dir: ./output # Ensure this matches your Eleventy output directory
