@@ -1,0 +1,26 @@
+{% import "components/general.njk" as components %}
+
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__content">
+
+      {% if not button %}
+        <div class="hero__button">
+          <h1 class="hero__title display-text">{{ hero }}</h1>
+        </div>
+      {% else %}
+        <h1 class="hero__title hero__title--button display-text">{{ hero }}</h1>
+        {{ components.button(button.url, button.text) }}
+      {% endif %}
+
+    </div>
+    {% if description %}
+      <h2 class="hero__description medium-large-text">{{ description }}</h2>
+    {% endif %}
+
+    {% if return %}
+      {{components.return(return)}}
+    {% endif %}
+    <hr class="hero__horizontal">
+  </div>
+</section>

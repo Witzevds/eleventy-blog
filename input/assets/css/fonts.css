@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "dm-sans";
+  src: url("/assets/fonts/DMSans-VariableFont_opsz,wght.ttf");
+}
+@font-face {
+  font-family: "literata";
+  src: url("/assets/fonts/Literata-VariableFont_opsz,wght.ttf");
+}
+.content__wrap {
+  & h2 {
+    font-family: "literata";
+    font-weight: 400;
+    font-size: 2.5rem;
+  }
+
+  & h3 {
+    font-family: "literata";
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+
+  & p {
+    font-family: "dm-sans";
+  }
+}
+.medium-text {
+  font-family: "dm-sans";
+  font-wweight: 400;
+  font-size: 1.25rem;
+}
+.display-text {
+  font-family: "literata";
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 5.625rem;
+}
+.medium-large-text {
+  font-family: "dm-sans";
+  font-weight: 400;
+  font-size: 24px;
+}
+.display-sans {
+  font-family: "literata";
+  font-weight: 400;
+  font-size: 3.75rem;
+}
+.display-small {
+  font-family: "literata";
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+.display-smaller {
+  font-family: "literata";
+  font-weight: 400;
+  font-size: 1.5rem;
+}

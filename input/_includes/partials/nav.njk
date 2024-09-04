@@ -1,0 +1,16 @@
+<header>
+  <div>
+    <nav class="nav">
+      <div class="nav__logo">
+        <a href="/">Clean</a>
+      </div>
+      <ul class="nav__pages">
+        {% for page in collections.pages %}
+          <li class="nav__pages--links">
+            <a href="{{ page.url }}">{{ page.data.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

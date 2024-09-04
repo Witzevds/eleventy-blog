@@ -1,0 +1,5 @@
+{
+  "layout": "detail.njk",
+  "tags": "projects",
+  "return":"/projecten"
+}

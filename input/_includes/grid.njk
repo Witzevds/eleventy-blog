@@ -1,0 +1,15 @@
+{% import "components/general.njk" as c %}
+
+{% extends "content.njk" %}
+{% block article %}
+
+  <div class="cards">
+
+    {% for project in collections[collection] %}
+
+      {{ c.card(project.data.title, project.data.description, project.data.image, project.url) }}
+
+    {% endfor %}
+  </div>
+
+{% endblock %}

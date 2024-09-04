@@ -1,0 +1,47 @@
+{% macro card(title, description, image, url) %}
+  <div class="card">
+
+    <a class="card__link" href="{{ url }}">
+      <img class="card__image" src="/assets/images/{{ image}}" alt="{{ title }}">
+    </a>
+    <div class="card__text">
+      <h3 class="card__text--title medium-large-text">{{ title }}</h3>
+
+      <p class="card__text--description medium-text">
+        {{ description }}
+      </p>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro button(url, text) %}
+  <a class="button__link" href="{{url}}">
+    <div class="button">
+      <p class="button__text">
+        {{text}}</p>
+    </div>
+  </a>
+{% endmacro %}
+
+{% macro return (url) %}
+  <div class="return">
+    <a class="return__text" href="{{url}}">
+      <img class="return__arrow" src="/assets/icons/arrow-left-svgrepo-com.svg" alt="">
+      <p>Go Back</p>
+    </a>
+  </div>
+
+{% endmacro %}
+
+{% macro list(items) %}
+  {% for item in items %}
+    <div class="list__item">
+
+      <div class="list__value medium-large-text">
+        {{ item.value }}</div >
+      <div class="list__tag medium-large-text">{{ item.tag }}</div>
+
+    </div>
+    <hr>
+  {% endfor %}
+{% endmacro %}

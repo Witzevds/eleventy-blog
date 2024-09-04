@@ -1,0 +1,27 @@
+---
+layout: content.njk
+title: contact
+hero: Get in touch, we’ll get back to you.
+tags: ["pages", "footer"]
+list:   
+  - value: "Korenmarkt 12, 9000 Ghent, Belgium"
+    tag: "address"
+  - value: "info@clean.be"
+    tag: "email"
+  - value: "+32 09 45 78 12"
+    tag: "Phone"
+---
+
+{% import "components/general.njk" as component %}
+<div class="list">
+  {{ component.list(list) }}
+</div>
+
+<div class="bottom-contact">
+
+  <div class="bottom-contact__button">
+    {{ component.button("https://www.youtube.com/watch?v=dQw4w9WgXcQ","Send us an email (dit werkt)" )}}
+  </div>
+  <img class="bottom-contact__image" src="/assets/images/Rectangle 2_29.png" alt="">
+
+</div>

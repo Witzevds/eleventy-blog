@@ -1,0 +1,9 @@
+:root {
+  --color-light: rgba(236, 235, 229, 1);
+  --color-dark: rgba(25, 25, 25, 1);
+}
+hr {
+  border: 0;
+  height: 2px;
+  background: var(--color-dark);
+}

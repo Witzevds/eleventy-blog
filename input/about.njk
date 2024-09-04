@@ -1,0 +1,25 @@
+---
+title: about
+tags: ["pages", "footer"]
+layout: content.njk
+collection: team
+hero: We are a creative agency with talented people.
+button:
+  url: /contact
+  text: Contact us
+display: ["Image 1.png", "Image 2.png", "Image 1_1.png","Image 2_1.png" ]
+
+---
+
+{% include "partials/image-display.njk" %}
+{% import "components/general.njk" as component %}
+<div class="team">
+  <h3 class="display-sans">Meet the team</h3>
+  <div class="team__cards">
+    {% for team in collections[collection] %}
+
+      {{ component.card(team.data.name, team.data.job, team.data.image) }}
+
+    {% endfor %}
+  </div>
+</div>
