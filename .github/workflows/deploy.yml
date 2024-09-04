@@ -3,7 +3,7 @@ name: Deploy Eleventy site to GitHub Pages
 on:
   push:
     branches:
-      - main # Replace with your default branch name
+      - gh-pages # Replace with your default branch name
 
 jobs:
   build:
